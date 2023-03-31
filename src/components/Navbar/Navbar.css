@@ -1,0 +1,18 @@
+.menu-area a {
+  transition: 0.3s;
+  display: inline-block;
+  padding: 5px 20px;
+  border-radius: 4px;
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+.menu-area a:hover {
+  background: #6780e521;
+}
+
+.menu-area a.active:hover,
+.menu-area a.active {
+  background: #5b7cfd;
+  color: #fff;
+}
