@@ -1,5 +1,7 @@
 import React from "react";
+// import { useLoaderData } from "react-router-dom";
 import AuthorHistory from "../AuthorHistory/AuthorHistory";
+import QuizGrid from "../QuizGrid/QuizGrid";
 import SectionHeading from "../SectionHeading/SectionHeading";
 import Welcome from "../Welcome/Welcome";
 
@@ -23,7 +25,9 @@ const Home = () => {
           <SectionHeading
             title="Trending Quizs"
             subtitle={"Explore our"}
+            className="mb-6"
           ></SectionHeading>
+          <QuizGrid></QuizGrid>
         </div>
       </div>
     </>
