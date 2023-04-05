@@ -8,7 +8,7 @@ import githubLogo from "../../assets/images/github.png";
 const SingleQuiz = ({ quizData }) => {
   const { name, logo, total, id } = quizData;
   return (
-    <Link to={`/${id}`}>
+    <Link to={`/quiz/${id}`}>
       <div
         className={`single-quiz rounded-lg bg-white py-4 px-4 text-center shadow-md pb-8 `}
       >

@@ -10,7 +10,7 @@ const Navbar = () => {
     { name: "Statistic", path: "statistic" },
   ];
   return (
-    <nav className="navbar bg-slate-100 py-2">
+    <nav className="navbar bg-slate-100 py-2 shadow-md">
       <div className="container flex items-center justify-between">
         <div className="logo-area">
           <Link to={"/"}>

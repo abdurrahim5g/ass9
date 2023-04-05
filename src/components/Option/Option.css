@@ -1,0 +1,10 @@
+.option-component label {
+  text-align: center;
+}
+.option-component input:checked + label {
+  background: #2896ff;
+}
+
+.option-component .correct {
+  background-color: lightgreen;
+}
