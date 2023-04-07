@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Option.css";
 
 const Option = ({ option, id, correctAnswer, index }) => {
-  console.log(correctAnswer);
+  // console.log(correctAnswer);
 
   const [answer, setAnswer] = useState(false);
   useEffect(() => {}, [answer]);

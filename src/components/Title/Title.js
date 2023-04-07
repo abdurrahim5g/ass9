@@ -1,9 +1,12 @@
 import React from "react";
 
-const Title = (props) => {
+const Title = ({ className, style, children }) => {
   return (
-    <h4 className={`text-2xl mb-2 text-white font-semibold ${props.className}`}>
-      {props.children}
+    <h4
+      className={`text-2xl mb-2 text-gray-50 font-semibold ${className}`}
+      style={style}
+    >
+      {children}
     </h4>
   );
 };

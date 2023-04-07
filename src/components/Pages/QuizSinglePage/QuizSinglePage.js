@@ -5,11 +5,15 @@ import SectionHeading from "../../SectionHeading/SectionHeading";
 import SingleQuestion from "../../SingleQuestion/SingleQuestion";
 import Text from "../../Text/Text";
 import Title from "../../Title/Title";
+import "./QuizSinglePage.css";
+import { showAnswer } from "../../../utility/utility";
 
 const QuizSinglePage = () => {
   const quizInfo = useLoaderData();
   const quizData = quizInfo.data;
   const questions = quizData.questions;
+
+  console.log(questions);
 
   return quizInfo.status ? (
     <section className="quiz-details">
@@ -24,7 +28,7 @@ const QuizSinglePage = () => {
               />
             </div>
             <div className="quiz-basic-info">
-              <Title className="text-slate-600">
+              <Title className="text-gray-600" style={{ color: "gray" }}>
                 Quiz name: {quizData.name}
               </Title>
               <Text className="text-slate-600">
@@ -37,7 +41,9 @@ const QuizSinglePage = () => {
           </div>
 
           <div className="user-mark-info text-center">
-            <Title className="text-slate-600 text-xl">Your total score</Title>
+            <Title className="text-xl" style={{ color: "gray" }}>
+              Your total score
+            </Title>
             <Text className="text-slate-600">5 out or {quizData.total}</Text>
           </div>
         </div>
@@ -49,8 +55,8 @@ const QuizSinglePage = () => {
             className="mb-16"
           ></SectionHeading>
 
-          <div className="questions-body mb-20">
-            <div className="grid grid-cols-2 gap-10">
+          <div className="questions-body mb-20 w-6/12 mx-auto">
+            <div className="grid  gap-10">
               {questions.map((question) => (
                 <SingleQuestion
                   key={question.id}
@@ -66,6 +72,17 @@ const QuizSinglePage = () => {
                 </button>
               )}
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="answer-popup hidden" id="answer-popup">
+        <div className="backdrop" onClick={() => showAnswer(false)}></div>
+        <div className="answer-container">
+          <div className="content">
+            <h5 id="correctAns" className="text-center">
+              ...
+            </h5>
           </div>
         </div>
       </div>
