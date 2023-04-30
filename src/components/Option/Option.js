@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./Option.css";
+import { useQuiz } from "../../Contex/QuizContex";
 
 const Option = ({ option, id, correctAnswer, index }) => {
-  // console.log(correctAnswer);
+  const { quizState, setQuizState } = useQuiz();
 
   const [answer, setAnswer] = useState(false);
   useEffect(() => {}, [answer]);
@@ -15,6 +16,15 @@ const Option = ({ option, id, correctAnswer, index }) => {
       setAnswer(false);
     }
     console.log(selectedAnswer, correctAnswer);
+  };
+
+  const storeAnswer = (ans) => {
+    setQuizState({
+      ...quizState,
+      answers: { ...quizState.answers, [quizState.currentQuizIndex]: ans },
+    });
+
+    // quizState.answers[quizState.currentQuizIndex] = ans;
   };
 
   return (
@@ -31,7 +41,10 @@ const Option = ({ option, id, correctAnswer, index }) => {
         className={`block cursor-pointer py-3 px-4 bg-slate-200 rounded-lg shadow-md ${
           answer && "correct"
         }`}
-        onClick={() => handleCorrectAnswer(`${id}-${index}`)}
+        onClick={() => {
+          handleCorrectAnswer(`${id}-${index}`);
+          storeAnswer(option);
+        }}
       >
         {option}
       </label>
