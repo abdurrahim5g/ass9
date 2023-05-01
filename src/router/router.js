@@ -1,5 +1,6 @@
 import BlogPage from "../components/Pages/BlogPage/BlogPage";
 import QuizSinglePage from "../components/Pages/QuizSinglePage/QuizSinglePage";
+import SingleBlogPage from "../components/Pages/SingleBlogPage/SingleBlogPage";
 import Statistic from "../components/Pages/Statistic/Statistic";
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
           ),
       },
       { path: "/blog", element: <BlogPage></BlogPage> },
+      { path: "/blog/:blogId", element: <SingleBlogPage></SingleBlogPage> },
       {
         path: "/statistic",
         element: <Statistic></Statistic>,
