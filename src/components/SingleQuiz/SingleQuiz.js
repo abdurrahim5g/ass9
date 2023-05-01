@@ -17,7 +17,7 @@ const SingleQuiz = ({ quizData }) => {
         <Text className="text-slate-600">
           Total: <Batch className="bg-blue-50 px-3 py-1 ">{total} quiz</Batch>
         </Text>
-        <button class="rounded-full mt-4 px-10 py-2 bg-blue-500 hover:bg-blue-400 font-semibold text-white">
+        <button className="rounded-full mt-4 px-10 py-2 bg-blue-500 hover:bg-blue-400 font-semibold text-white">
           Start quizs
         </button>
       </div>

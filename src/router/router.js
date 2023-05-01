@@ -1,5 +1,6 @@
 import BlogPage from "../components/Pages/BlogPage/BlogPage";
 import QuizSinglePage from "../components/Pages/QuizSinglePage/QuizSinglePage";
+import Statistic from "../components/Pages/Statistic/Statistic";
 
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Home } = require("../components/Home/Home");
@@ -24,7 +25,11 @@ const router = createBrowserRouter([
           ),
       },
       { path: "/blog", element: <BlogPage></BlogPage> },
-      { path: "/statistic", element: <h3>Statistic</h3> },
+      {
+        path: "/statistic",
+        element: <Statistic></Statistic>,
+        loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
+      },
     ],
   },
 ]);
