@@ -20,33 +20,39 @@ const BlogPage = () => {
         <SectionHeading
           subtitle="Explore Our"
           title={"Latest Blogs"}
-          className="mb-20"
         ></SectionHeading>
 
         <div className="blogs-container">
-          <div className="latest-blog mb-16 pt-6">
-            <div className="grid grid-cols-2 gap-16 ">
-              <div className="blog-image rounded-lg overflow-hidden">
-                <img
-                  src={latestBlog.img}
-                  alt={latestBlog.title}
-                  className="aspect-video	"
-                />
+          <div className="latest-blog mb-16 md:pt-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2  gap-5 lg:gap-16 ">
+              <div className="blog-image  overflow-hidden">
+                <Link to={`${latestBlog.id}`}>
+                  <img
+                    src={latestBlog.img}
+                    alt={latestBlog.title}
+                    className="aspect-video	rounded-lg"
+                  />
+                </Link>
               </div>
               <div className="blog-content">
-                <p className="opacity-75">{latestBlog.date}</p>
-                <Title className={"text-gray-800 my-6   mb-8"}>
-                  <Link to={`${latestBlog.id}`}> {latestBlog.title}</Link>
+                <p className="opacity-75 mt-5">{latestBlog.date}</p>
+                <Title className={"text-gray-800 my-6   mb-4"}>
+                  <Link
+                    to={`${latestBlog.id}`}
+                    className="hover:text-blue-700 transition"
+                  >
+                    {latestBlog.title}
+                  </Link>
                 </Title>
                 <p className="leading-8 opacity-75">
-                  {latestBlog.desc.slice(0, 450)}...
+                  {latestBlog.desc.slice(0, 400)}...
                 </p>
               </div>
             </div>
           </div>
 
           <div className="all-blogs">
-            <div className="grid grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-7 md:gap-10">
               {allBlogs.map((blog) => (
                 <SingleBlog key={blog.id} blog={blog}></SingleBlog>
               ))}

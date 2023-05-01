@@ -7,13 +7,17 @@ const SingleBlog = ({ blog }) => {
   return (
     <article className="single-blog-component">
       <div className="blog-image rounded-lg overflow-hidden">
-        <img src={img} alt={title} className="aspect-video	" />
+        <Link to={`${id}`}>
+          <img src={img} alt={title} className="aspect-video	" />
+        </Link>
       </div>
       <div className="blog-content">
         <p className="mt-6 opacity-75">{date}</p>
 
         <Title className={"text-gray-800 my-4 opacity-75"}>
-          <Link to={`${id}`}>{title}</Link>
+          <Link to={`${id}`} className="hover:text-blue-700 transition">
+            {title}
+          </Link>
         </Title>
 
         <p className="leading-8 opacity-75">{desc.slice(0, 150)}...</p>
