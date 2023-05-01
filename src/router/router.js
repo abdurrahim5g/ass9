@@ -1,3 +1,4 @@
+import BlogPage from "../components/Pages/BlogPage/BlogPage";
 import QuizSinglePage from "../components/Pages/QuizSinglePage/QuizSinglePage";
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
             `https://openapi.programming-hero.com/api/quiz/${params.quizId}`
           ),
       },
-      { path: "/blog", element: <h3>Blogs</h3> },
+      { path: "/blog", element: <BlogPage></BlogPage> },
       { path: "/statistic", element: <h3>Statistic</h3> },
     ],
   },

@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "img": "https://reactrouter.com/ogimage.png",
+    "title": "What is React Router?",
+    "desc": "React Router is a third-party library that allows you to implement routing and navigation in a React application. It provides a set of components and tools that enable you to define routes for different URLs, and render different components based on the current URL. \n Features of React Router include: \n  Declarative routing: You can define routes as React components and use them to specify what to render when a URL matches.  \n  Nested routes: You can nest routes within other routes, enabling you to create complex user interfaces with multiple levels of navigation.  \n  Dynamic routing: You can use route parameters to make dynamic URLs that can be used to fetch data from a server or to render specific content.  \n  Programmatic navigation: You can navigate programmatically to different views or pages using the history object, which allows you to manipulate the browser's history stack.  \n  Overall, React Router provides a powerful and flexible solution for implementing routing and navigation in a React application. It makes it easy to create a smooth and seamless user experience by enabling users to navigate between different views and pages without having to reload the entire application. With its advanced features, React Router can help you create complex applications with multiple levels of navigation and dynamic content.",
+    "date": "05 April 2023"
+  },
+  {
+    "id": 2,
+    "img": "https://www.qed42.com/sites/default/files/2020-05/Context%20API%20in%20React%20with%20Hooks.png",
+    "title": "How does context API work?",
+    "desc": "The Context API is a feature in React that provides a way to pass data through the component tree without having to pass props down manually at every level. It allows you to share data between components without having to use props, which can make your code cleaner and easier to manage.  \n  Here's how the Context API works: \n  Create a Context: First, you need to create a new Context using the createContext method. This creates a new context object that you can use to store data that you want to share between components. \n  Provide the Context: Next, you need to provide the context to your components. This is typically done at the top level of your component tree using the Provider component. The Provider component takes a value prop, which is the data that you want to share. \n  Consume the Context: Finally, you can consume the data from the context in any of your components using the useContext hook. This hook allows you to access the data from the context and use it in your component's render function.",
+    "date": "10 April 2023"
+  },
+  {
+    "id": 3,
+    "img": "https://blog.openreplay.com/images/understanding-the-useref-hook/images/hero.png",
+    "title": "What is useRef in react?",
+    "desc": "useRef is a built-in hook in React that provides a way to create a mutable reference that persists across re-renders of a component. It is often used to store a reference to a DOM element or to keep track of the previous value of a state or prop. \n Here are some key features of useRef in React: \n Creating a Ref: You can create a ref by calling the useRef hook and passing an initial value as an argument. The useRef hook returns a mutable ref object with a current property that can be used to store and retrieve the current value of the ref. \n Accessing DOM Elements: One common use case for useRef is to access a DOM element. You can assign the ref to a ref attribute on a JSX element, and then access the DOM element using the current property of the ref object. \n Storing Previous Values: Another use case for useRef is to store the previous value of a state or prop. You can update the value of the ref in a useEffect hook that runs after each render, and then compare the current value to the previous value in subsequent renders.",
+    "date": "17 April 2023"
+  },
+  {
+    "id": 4,
+    "img": "https://blog.appsignal.com/_next/image?url=%2Fimages%2Fblog%2F2022-11%2Fnextjs-13.png&w=3840&q=50",
+    "title": "What is Next JS?",
+    "desc": "Next.js is a free and open-source web development framework built on top of React.js, Node.js, and Webpack. It is designed to make it easy to build production-ready web applications with React. \n Here are some key features of Next.js: \n Server-side Rendering: Next.js allows for server-side rendering (SSR) of your React components, which means that your pages can be rendered on the server and sent to the client as HTML. This can improve the performance of your web application, especially for search engine optimization (SEO) and initial page load times. \n Automatic Code Splitting: Next.js automatically splits your code into smaller chunks and loads only what is necessary for each page. This can help improve the performance of your web application by reducing the amount of JavaScript that needs to be loaded by the client. \n Routing: Next.js has built-in support for client-side routing, which means that you can create links between pages in your web application without needing to perform a full page refresh. \n Static Site Generation: Next.js allows you to generate a fully static website that can be deployed to a content delivery network (CDN) or a static hosting service. This can improve the performance and scalability of your web application by serving static files directly to the client. \n API Routes: Next.js allows you to create serverless API endpoints that can be used to fetch or update data from your web application. This can simplify the architecture of your web application and make it easier to build and deploy serverless applications. \n Overall, Next.js is a powerful and flexible framework for building web applications with React. Its focus on server-side rendering, automatic code splitting, routing, and static site generation make it a popular choice for building modern web applications.",
+    "date": "01 March 2023"
+  }
+]
