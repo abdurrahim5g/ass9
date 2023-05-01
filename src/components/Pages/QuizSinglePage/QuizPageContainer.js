@@ -149,6 +149,9 @@ const QuizPageContainer = ({ quizInfo }) => {
         <div className="backdrop" onClick={() => showAnswer(false)}></div>
         <div className="answer-container">
           <div className="content">
+            <Title className={"text-gray-600 text-center mb-10"}>
+              Correct answer is:
+            </Title>
             <h5 id="correctAns" className="text-center">
               ...
             </h5>

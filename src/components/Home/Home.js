@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <>
       <div className="hero-area py-12">
-        <div className="container ">
+        <div className="container overflow-hidden">
           <div className="grid grid-cols-1  lg:grid-cols-3 gap-4">
             <div className="welcome-section ">
               <Welcome></Welcome>
