@@ -6,8 +6,8 @@ import Title from "../Title/Title";
 const AuthorHistory = () => {
   return (
     <div className="author-history welcome bg-slate-300 rounded-2xl shadow-sm py-7 px-6">
-      <Title>Author History</Title>
-      <div className="grid grid-cols-4">
+      <Title className={"text-xl md:text-2xl"}>Author History</Title>
+      <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
         <Text>
           Total points <Batch>708</Batch>
         </Text>

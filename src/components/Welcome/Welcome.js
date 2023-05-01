@@ -13,7 +13,9 @@ const Welcome = () => {
           <img src={authorImg} alt="Author" className="w-20 mr-6" />
         </div>
         <div className="author-info">
-          <Title>Welcome, {"Abdur Rahim"}</Title>
+          <Title className={"text-xl md:text-2xl"}>
+            Welcome, {" Abdur Rahim"}
+          </Title>
           <Text>
             World Ranking: <Batch>145</Batch>
           </Text>
