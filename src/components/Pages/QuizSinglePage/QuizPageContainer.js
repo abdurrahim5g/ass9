@@ -57,7 +57,7 @@ const QuizPageContainer = ({ quizInfo }) => {
   return (
     <section className="quiz-details">
       <div className="container">
-        <div className="quiz-header grid grid-cols-2 py-16">
+        <div className="quiz-header grid grid-cols-1 md:grid-cols-2 py-16">
           <div className="flex items-center quiz-info">
             <div className="quiz-image mr-5">
               <img
@@ -67,7 +67,10 @@ const QuizPageContainer = ({ quizInfo }) => {
               />
             </div>
             <div className="quiz-basic-info">
-              <Title className="text-gray-600" style={{ color: "gray" }}>
+              <Title
+                className="text-gray-600 text-xl lg:text-2xl"
+                style={{ color: "gray" }}
+              >
                 Quiz name: {quizData.name}
               </Title>
               <Text className="text-slate-600">
@@ -79,7 +82,7 @@ const QuizPageContainer = ({ quizInfo }) => {
             </div>
           </div>
 
-          <div className="user-mark-info text-center">
+          <div className="user-mark-info text-center hidden md:block">
             <Title className="text-xl" style={{ color: "gray" }}>
               Quiz number
             </Title>
@@ -96,7 +99,7 @@ const QuizPageContainer = ({ quizInfo }) => {
             className="mb-16"
           ></SectionHeading>
 
-          <div className="questions-body mb-20 w-6/12 mx-auto">
+          <div className="questions-body mb-20 w-12/12 md:w-8/12 lg:w-6/12 mx-auto">
             {!quizState.submit ? (
               <div className="grid  gap-10">
                 <SingleQuestion
@@ -104,7 +107,7 @@ const QuizPageContainer = ({ quizInfo }) => {
                   singleQuestion={questions[quizState.currentQuizIndex]}
                 ></SingleQuestion>
 
-                <div className="next-prev grid gap-4 grid-cols-2 w-2/4 mx-auto">
+                <div className="next-prev grid gap-4 grid-cols-2 w-12/12 md:w-8/12 lg:w-6/12 mx-auto">
                   <button
                     className="rounded px-10 py-3 bg-red-200 hover:bg-red-300 font-semibold text-gray-800"
                     onClick={() =>
