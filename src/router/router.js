@@ -1,4 +1,5 @@
 import BlogPage from "../components/Pages/BlogPage/BlogPage";
+import ErrorPage from "../components/Pages/ErrorPage/ErrorPage";
 import QuizSinglePage from "../components/Pages/QuizSinglePage/QuizSinglePage";
 import SingleBlogPage from "../components/Pages/SingleBlogPage/SingleBlogPage";
 import Statistic from "../components/Pages/Statistic/Statistic";
@@ -32,8 +33,10 @@ const router = createBrowserRouter([
         element: <Statistic></Statistic>,
         loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
       },
+      { path: "*", element: <ErrorPage></ErrorPage> },
     ],
   },
+  { path: "*", element: <ErrorPage></ErrorPage> },
 ]);
 
 export default router;
